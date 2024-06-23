@@ -1,5 +1,6 @@
 package com.ecom.productcatalogservice.services;
 
+import com.ecom.productcatalogservice.controllerAdvice.ProductNotFoundException;
 import com.ecom.productcatalogservice.dtos.ProductResponseDto;
 import com.ecom.productcatalogservice.models.Category;
 import com.ecom.productcatalogservice.models.Product;
@@ -33,14 +34,14 @@ public class FakeStoreAPI implements IProductService{
     }
     @Override
     public Product getProduct(Long id) {
-        ProductResponseDto productResponseDto = restTemplate.getForObject("https://fakestoreapi.com/products/"+id.toString(), ProductResponseDto.class);
-
-        //need to add Exception handling
-        if(productResponseDto == null)
+        ProductResponseDto productResponseDto;
+        try{
+            productResponseDto = restTemplate.getForObject("https://fakestoreapi.com/products/"+id.toString(), ProductResponseDto.class);
+        }catch(Exception ex)
         {
-            System.out.println("Product Not Found");
+            throw new ProductNotFoundException("Product Not Found");
         }
-
+        //need to add Exception handling
         return getProductFromFakeStore(productResponseDto);
     }
 }

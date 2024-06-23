@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47dfaf47-f56b-4143-80e0-3cfce2e3e423" name="Changes" comment="" />
+    <list default="true" id="47dfaf47-f56b-4143-80e0-3cfce2e3e423" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/FakeStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/FakeStoreAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,8 +41,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ProductCatalogServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -69,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718561894696</updated>
       <workItem from="1718561895836" duration="995000" />
-      <workItem from="1719119240150" duration="509000" />
+      <workItem from="1719119240150" duration="10184000" />
     </task>
     <servers />
   </component>
