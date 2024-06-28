@@ -1,8 +1,10 @@
 package com.ecom.productcatalogservice.controllers;
 
 import com.ecom.productcatalogservice.dtos.ProductRequestDto;
+import com.ecom.productcatalogservice.models.Category;
 import com.ecom.productcatalogservice.models.Product;
 import com.ecom.productcatalogservice.services.IProductService;
+import com.ecom.productcatalogservice.util.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -33,16 +35,18 @@ public class ProductController {
         return productService.getProduct(productId);
     }
 
-    @PostMapping("/product/addNew")
+    @PostMapping("/product/addProduct")
     public Product addNewProduct(@RequestBody ProductRequestDto productRequestDto)
     {
-        return new Product();
+        Product product = ProductMapper.createProductFromDTO(productRequestDto);
+        return productService.addProduct(product);
     }
 
     @PutMapping("/product/update/{id}")
     public Product updateProduct(@PathVariable("id") Long id, @RequestBody ProductRequestDto productRequestDto)
     {
-        return new Product();
+        Product product = ProductMapper.createProductFromDTO(productRequestDto);
+        return productService.updateProduct(id,product);
     }
 
     @DeleteMapping("/product/delete/{id}")

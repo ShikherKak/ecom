@@ -44,4 +44,14 @@ public class FakeStoreAPI implements IProductService{
         //need to add Exception handling
         return getProductFromFakeStore(productResponseDto);
     }
+
+    @Override
+    public Product addProduct(Product product) {
+        return null;
+    }
+
+    @Override
+    public Product updateProduct(Long id,Product product) {
+        return null;
+    }
 }

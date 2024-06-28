@@ -8,5 +8,9 @@ public interface IProductService {
 
     public Product getProduct(Long id);
 
+    Product addProduct(Product product);
+
+    Product updateProduct(Long id,Product product);
+
 
 }
