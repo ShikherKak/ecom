@@ -12,6 +12,6 @@ public class GlobalControllerAdvice {
     @ExceptionHandler(ProductNotFoundException.class)
     public ResponseEntity<String> handleProductNotFoundException()
     {
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Product Not found",HttpStatus.NOT_FOUND);
     }
 }
