@@ -1,15 +1,13 @@
 package com.ecom.productcatalogservice.controllers;
 
 import com.ecom.productcatalogservice.dtos.ProductRequestDto;
-import com.ecom.productcatalogservice.models.Category;
 import com.ecom.productcatalogservice.models.Product;
 import com.ecom.productcatalogservice.services.IProductService;
 import com.ecom.productcatalogservice.util.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -26,7 +24,7 @@ public class ProductController {
     @GetMapping("/product/getAllProducts")
     public List<Product> getProduct()
     {
-        return new ArrayList<>();
+        return productService.getAllProducts();
     }
 
     @GetMapping("/product/{id}")
@@ -50,10 +48,18 @@ public class ProductController {
     }
 
     @DeleteMapping("/product/delete/{id}")
-    public boolean deleteProduct(@PathVariable("id") Long id)
+    public ResponseEntity<Void> deleteProduct(@PathVariable("id") Long id)
     {
-        return true;
+        productService.deleteById(id);
+        return ResponseEntity.noContent().build(); //returns a no body 204 status
     }
+
+    @GetMapping("/product/getAllByCategory/{categoryId}")
+    public List<Product> getAllByCategory(@PathVariable("categoryId") Long categoryId)
+    {
+        return productService.getAllByCategory(categoryId);
+    }
+
 
 
 }

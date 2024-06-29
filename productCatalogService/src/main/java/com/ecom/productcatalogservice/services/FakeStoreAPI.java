@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class FakeStoreAPI implements IProductService{
 
@@ -53,5 +56,20 @@ public class FakeStoreAPI implements IProductService{
     @Override
     public Product updateProduct(Long id,Product product) {
         return null;
+    }
+
+    @Override
+    public List<Product> getAllProducts() {
+        return null;
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
+    }
+
+    @Override
+    public List<Product> getAllByCategory(Long categoryId) {
+        return new ArrayList<>();
     }
 }

@@ -3,6 +3,8 @@ package com.ecom.productcatalogservice.services;
 import com.ecom.productcatalogservice.models.Product;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 public interface IProductService {
 
@@ -11,6 +13,13 @@ public interface IProductService {
     Product addProduct(Product product);
 
     Product updateProduct(Long id,Product product);
+
+    List<Product> getAllProducts();
+
+    void deleteById(Long id);
+
+    List<Product> getAllByCategory(Long categoryId);
+
 
 
 }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -86,6 +87,37 @@ public class ProductService implements IProductService{
             updatedProduct.setCategory(categoryOptional.get());
         }
         return productRepository.save(updatedProduct);
+    }
+
+    @Override
+    public List<Product> getAllProducts() {
+
+        List<Product> allproducts = productRepository.findAll();
+
+        if(allproducts.isEmpty())
+        {
+            throw new ProductNotFoundException("No Products found");
+        }
+
+        return allproducts;
+
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
+        Optional<Product> product = productRepository.findById(id);
+
+        if(product.isEmpty())
+        {
+            throw new ProductNotFoundException("Product Not Found");
+        }
+        productRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Product> getAllByCategory(Long categoryId) {
+        return productRepository.findByCategory(categoryId);
     }
 
 }
