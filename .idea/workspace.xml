@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47dfaf47-f56b-4143-80e0-3cfce2e3e423" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b410ea2-ba81-4069-80aa-05adaf6ce171.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b410ea2-ba81-4069-80aa-05adaf6ce171.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/Repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/Repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/FakeStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/FakeStoreAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,12 +97,24 @@
       <workItem from="1719119240150" duration="11463000" />
       <workItem from="1719511768503" duration="4198000" />
       <workItem from="1719589224042" duration="8296000" />
-      <workItem from="1719689408408" duration="6207000" />
+      <workItem from="1719689408408" duration="6592000" />
+      <workItem from="1719742076297" duration="6310000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

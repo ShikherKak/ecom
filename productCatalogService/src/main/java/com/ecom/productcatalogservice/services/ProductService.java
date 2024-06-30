@@ -37,20 +37,7 @@ public class ProductService implements IProductService{
 
     @Override
     public Product addProduct(Product product) {
-        Optional<Category> categoryOptional = categoryRepository.findByName(product.getCategory().getName());
-
-        if(categoryOptional.isEmpty())
-        {
-            Category newCategory = new Category();
-            newCategory.setName(product.getCategory().getName());
-            Category categoryToSave = categoryRepository.save(newCategory);
-            product.setCategory(categoryToSave);
-        }
-        else
-        {
-            product.setCategory(categoryOptional.get());
-        }
-
+        //we have used cascading here to add category
         Product savedProduct = productRepository.save(product);
         return savedProduct;
     }
