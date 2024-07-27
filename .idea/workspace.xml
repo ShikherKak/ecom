@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47dfaf47-f56b-4143-80e0-3cfce2e3e423" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/Repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/Repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/test/java/com/ecom/productcatalogservice/PrductCatalogServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/test/java/com/ecom/productcatalogservice/PrductCatalogServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,41 +35,62 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2hyMWNBSRQ5qRautMVfuNl1Fmhj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ProductCatalogServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/CV Project/ecom&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.PrductCatalogServiceApplicationTests.checkEception.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ProductCatalogServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/CV Project/ecom",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+    <configuration name="PrductCatalogServiceApplicationTests.checkEception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="productCatalogService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecom.productcatalogservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ecom.productcatalogservice" />
+      <option name="MAIN_CLASS_NAME" value="com.ecom.productcatalogservice.PrductCatalogServiceApplicationTests" />
+      <option name="METHOD_NAME" value="checkEception" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductCatalogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="productCatalogService" />
@@ -77,6 +99,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="userService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PrductCatalogServiceApplicationTests.checkEception" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -98,12 +133,28 @@
       <workItem from="1719511768503" duration="4198000" />
       <workItem from="1719589224042" duration="8296000" />
       <workItem from="1719689408408" duration="6592000" />
-      <workItem from="1719742076297" duration="6310000" />
+      <workItem from="1719742076297" duration="6917000" />
+      <workItem from="1720291970435" duration="2289000" />
+      <workItem from="1720371427840" duration="1995000" />
+      <workItem from="1722106173213" duration="3903000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.xml.ws:jakarta.xml.ws-api" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
