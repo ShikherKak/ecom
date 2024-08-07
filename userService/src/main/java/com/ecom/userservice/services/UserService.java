@@ -1,4 +1,4 @@
-package com.ecom.userservice.serices;
+package com.ecom.userservice.services;
 
 import org.springframework.stereotype.Service;
 
