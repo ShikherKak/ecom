@@ -5,16 +5,17 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity
 @Getter
 @Setter
-public class User extends BaseModel{
+public class Token extends BaseModel{
 
-    private String userName;
-    private String hashPassword;
-    private String email;
+    private String value;
+    private Boolean isDeleted;
+    private Date expieryDate;
     @ManyToOne
-    private Role role;
-    private Boolean isEmailVerified;
+    private User user;
 
 }
