@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47dfaf47-f56b-4143-80e0-3cfce2e3e423" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/BaseModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/test/java/com/ecom/productcatalogservice/PrductCatalogServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/test/java/com/ecom/productcatalogservice/PrductCatalogServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/security/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +58,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ProductCatalogServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "springSecurity__11__08",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/CV Project/ecom",
@@ -136,7 +140,14 @@
       <workItem from="1719742076297" duration="6917000" />
       <workItem from="1720291970435" duration="2289000" />
       <workItem from="1720371427840" duration="1995000" />
-      <workItem from="1722106173213" duration="3903000" />
+      <workItem from="1722106173213" duration="4297000" />
+      <workItem from="1723046573570" duration="4740000" />
+      <workItem from="1723307500834" duration="4374000" />
+      <workItem from="1723392275863" duration="5918000" />
+      <workItem from="1723509553586" duration="698000" />
+      <workItem from="1723595146028" duration="3785000" />
+      <workItem from="1723722547099" duration="9836000" />
+      <workItem from="1723744219929" duration="5330000" />
     </task>
     <servers />
   </component>
@@ -174,6 +185,11 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/services/UserService.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
