@@ -5,6 +5,7 @@ import com.ecom.productcatalogservice.models.Product;
 import com.ecom.productcatalogservice.services.IProductService;
 import com.ecom.productcatalogservice.util.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,10 +49,10 @@ public class ProductController {
     }
 
     @DeleteMapping("/product/delete/{id}")
-    public ResponseEntity<Void> deleteProduct(@PathVariable("id") Long id)
+    public ResponseEntity<String> deleteProduct(@PathVariable("id") Long id)
     {
         productService.deleteById(id);
-        return ResponseEntity.noContent().build(); //returns a no body 204 status
+        return ResponseEntity.status(HttpStatus.OK).body("Product has been deleted"); //returns a no body 204 status
     }
 
     @GetMapping("/product/getAllByCategory/{categoryId}")
