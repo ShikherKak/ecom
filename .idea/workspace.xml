@@ -6,15 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="47dfaf47-f56b-4143-80e0-3cfce2e3e423" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/security/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ProductCatalogServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "springSecurity__11__08",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/CV Project/ecom",
@@ -78,7 +75,10 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductCatalogServiceApplication">
     <configuration name="PrductCatalogServiceApplicationTests.checkEception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="productCatalogService" />
       <extension name="coverage">
@@ -147,7 +147,10 @@
       <workItem from="1723509553586" duration="698000" />
       <workItem from="1723595146028" duration="3785000" />
       <workItem from="1723722547099" duration="9836000" />
-      <workItem from="1723744219929" duration="5330000" />
+      <workItem from="1723744219929" duration="5529000" />
+      <workItem from="1723826623461" duration="2269000" />
+      <workItem from="1723830189502" duration="113000" />
+      <workItem from="1723830499795" duration="5455000" />
     </task>
     <servers />
   </component>
@@ -186,8 +189,8 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/services/UserService.java</url>
-          <line>67</line>
+          <url>file://$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java</url>
+          <line>36</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

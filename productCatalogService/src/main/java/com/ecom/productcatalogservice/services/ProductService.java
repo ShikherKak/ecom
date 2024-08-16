@@ -8,31 +8,41 @@ import com.ecom.productcatalogservice.models.Category;
 import com.ecom.productcatalogservice.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Primary
 public class ProductService implements IProductService{
 
-    ProductRepository productRepository;
-    CategoryRepository categoryRepository;
+    private ProductRepository productRepository;
+    private CategoryRepository categoryRepository;
+    private RedisTemplate<String,Long> redisTemplate;
 
     @Autowired
-    public ProductService(ProductRepository productRepository, CategoryRepository categoryRepository)
+    public ProductService(ProductRepository productRepository, CategoryRepository categoryRepository, RedisTemplate<String,Long> redisTemplate)
     {
         this.productRepository = productRepository;
         this.categoryRepository = categoryRepository;
+        this.redisTemplate = redisTemplate;
     }
 
 
     @Override
     public Product getProduct(Long id) {
+        if(redisTemplate.opsForHash().hasKey("PRODUCTS",id)) { //check redis cache
+            return (Product) redisTemplate.opsForHash().get("PRODUCTS", id);
+        }
 
-        return productRepository.findById(id).
-                orElseThrow(() -> new ProductNotFoundException("Product Not Found"));
+        Product product =productRepository.findById(id).
+        orElseThrow(() -> new ProductNotFoundException("Product Not Found"));
+        redisTemplate.opsForHash().put("PRODUCTS",id,product); //add to Redis Cache
+        redisTemplate.expire("PRODUCTS", 10, TimeUnit.SECONDS);
+        return product;
     }
 
     @Override
