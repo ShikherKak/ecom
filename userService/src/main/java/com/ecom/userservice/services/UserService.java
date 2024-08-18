@@ -3,13 +3,17 @@ package com.ecom.userservice.services;
 import com.ecom.userservice.controllerAdvice.EmailAlreadyInUseException;
 import com.ecom.userservice.controllerAdvice.InvalidCredentialsException;
 import com.ecom.userservice.controllerAdvice.UserNotFoundException;
+import com.ecom.userservice.dtos.SendEmailMessageDto;
 import com.ecom.userservice.dtos.SignUpRequestDTO;
 import com.ecom.userservice.models.Token;
 import com.ecom.userservice.models.User;
 import com.ecom.userservice.repositories.TokenRepository;
 import com.ecom.userservice.repositories.UserRepository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -24,31 +28,53 @@ import java.util.UUID;
 @Service
 public class UserService {
 
-    UserRepository userRepository;
-    BCryptPasswordEncoder bCryptPasswordEncoder;
-    TokenRepository tokenRepository;
+    private final UserRepository userRepository;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final TokenRepository tokenRepository;
+    private final KafkaTemplate<String,String> kafkaTemplate;
+    private final ObjectMapper objectMapper;
 
     @Autowired
-    public UserService(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder, TokenRepository tokenRepository)
+    public UserService(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder, TokenRepository tokenRepository, KafkaTemplate<String,String> kafkaTemplate, ObjectMapper objectMapper)
     {
         this.userRepository = userRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.tokenRepository = tokenRepository;
+        this.kafkaTemplate = kafkaTemplate;
+        this.objectMapper = objectMapper;
     }
 
 
-    public User signUp(String userName, String email, String password) throws EmailAlreadyInUseException {
-        Optional<User> user = userRepository.getUserByEmail(email);
+    public User signUp(String userName, String email, String password) throws EmailAlreadyInUseException{
+        Optional<User> optionalUser = userRepository.getUserByEmail(email);
 
-        if(user.isPresent()) {
+        if(optionalUser.isPresent()) {
             throw new EmailAlreadyInUseException("The Email provided is already in use");
         }
         User newUser = new User();
         newUser.setUserName(userName);
         newUser.setEmail(email);
         newUser.setHashPassword(bCryptPasswordEncoder.encode(password));
+        User user = userRepository.save(newUser);
 
-        return userRepository.save(newUser);
+        //sending Email via kafka
+        SendEmailMessageDto messageDto = new SendEmailMessageDto();
+        messageDto.setFrom("shikherkak@gmail.com");
+        messageDto.setTo(user.getEmail());
+        messageDto.setSubject("You've signed up");
+        messageDto.setBody("Welcome to the party");
+
+        try {
+            kafkaTemplate.send(
+                    "sendEmail",
+                    objectMapper.writeValueAsString(messageDto)
+            );
+        }
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+        return user;
     }
 
     public void deleteUser(Long userId) {
