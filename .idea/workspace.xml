@@ -10,11 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/productCatalogService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/Repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/Repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/FakeStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/FakeStoreAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/ProductCatalogServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/java/com/ecom/productcatalogservice/ProductCatalogServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productCatalogService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/productCatalogService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/ecom/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +32,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,11 +60,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ProductCatalogServiceApplication.executor": "Run",
+    "Spring Boot.ServiceDiscoveryApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/CV Project/ecom/emailService",
+    "last_opened_file_path": "C:/CV Project/ecom/productCatalogService",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +96,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductCatalogServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ServiceDiscoveryApplication">
     <configuration name="PrductCatalogServiceApplicationTests.checkEception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="productCatalogService" />
       <extension name="coverage">
@@ -123,6 +125,14 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="productCatalogService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.productcatalogservice.ProductCatalogServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceDiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="serviceDiscovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.servicediscovery.ServiceDiscoveryApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,7 +186,8 @@
       <workItem from="1723830189502" duration="113000" />
       <workItem from="1723830499795" duration="5756000" />
       <workItem from="1723977863124" duration="357000" />
-      <workItem from="1724283237457" duration="3746000" />
+      <workItem from="1724283237457" duration="3977000" />
+      <workItem from="1724347283537" duration="2459000" />
     </task>
     <servers />
   </component>
