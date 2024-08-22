@@ -1,6 +1,8 @@
 package com.ecom.productcatalogservice.Repositories;
 
 import com.ecom.productcatalogservice.models.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -23,5 +25,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     //this is the usage of JPQL
     @Query("select p from Product p where p.category.id = :categoryId")
     List<Product> findByCategory(@Param("categoryId")Long categoryId);
+
+    Page<Product> getProductsByNameContains(String name, Pageable pageable);
 
 }

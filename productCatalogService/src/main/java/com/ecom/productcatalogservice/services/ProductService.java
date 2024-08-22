@@ -8,6 +8,9 @@ import com.ecom.productcatalogservice.models.Category;
 import com.ecom.productcatalogservice.models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -115,6 +118,11 @@ public class ProductService implements IProductService{
     @Override
     public List<Product> getAllByCategory(Long categoryId) {
         return productRepository.findByCategory(categoryId);
+    }
+
+    @Override
+    public Page<Product> getAllByName(String Name, int startIndex, int pageSize) {
+        return productRepository.getProductsByNameContains(Name, PageRequest.of(startIndex/pageSize,pageSize));
     }
 
 }

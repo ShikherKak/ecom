@@ -5,6 +5,7 @@ import com.ecom.productcatalogservice.models.Product;
 import com.ecom.productcatalogservice.services.IProductService;
 import com.ecom.productcatalogservice.util.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -60,6 +61,16 @@ public class ProductController {
     {
         return productService.getAllByCategory(categoryId);
     }
+
+    @PostMapping("/product/search")
+    public Page<Product> getAllContainingName(@RequestParam("name") String name,
+                                              @RequestParam("startIndex") int startingIndex,
+                                              @RequestParam("pageSize") int numberOfElements
+                                              )
+    {
+        return productService.getAllByName(name,startingIndex,numberOfElements);
+    }
+
 
 
 
